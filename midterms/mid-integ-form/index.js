@@ -4,7 +4,7 @@ const app = express();
 
 app.use(express.static('public'));
 
-app.get('/', (req, res) => {
+app.get((req, res) => {
   res.sendFile(__dirname + 'contact.html');
 });
 
@@ -15,7 +15,7 @@ app.listen(port, () => {
 });
 
 
-app.get('/', function (req, res) {
+app.get(function (req, res) {
   res.sendFile(__dirname + 'contact.html');
 });
 
