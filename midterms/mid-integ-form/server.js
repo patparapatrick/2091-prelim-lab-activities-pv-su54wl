@@ -6,9 +6,9 @@ app.get('/', function (req, res) {
 });
 
 app.get('/proces_get', function (req, res) {
-  respone = {
+  response = {
     first_name:req.query.first_name,
-    last_name:req.query.last_name,
+    last_name:req.query.last_name
   };
 
   console.log(response);
