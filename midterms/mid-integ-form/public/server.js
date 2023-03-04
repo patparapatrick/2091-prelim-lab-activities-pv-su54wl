@@ -6,7 +6,7 @@ var bodyParser = require('body-parser');
 var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/' + 'index.html');
+  res.sendFile(__dirname + '/' + 'contact.html');
 });
 app.post('/process_post', urlencodedParser, function (req, res) {
   // Prepare output in JSON format
