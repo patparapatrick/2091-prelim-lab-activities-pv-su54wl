@@ -16,10 +16,14 @@
       <a href="upload.html">Upload</a>
     </div>
     <h1>This is Contact Page</h1>
-    <form action="http://127.0.0.1:3000/process_get" method="GET">
-      First Name: <input type="text" name="first_name"> <br />
-      Last Name: <input type="text" name="last_name">
-      <input type="submit" value="Submit">
+    <form
+      action="http://127.0.0.1:3000/process_get"
+      enctype="multipart/form-data"
+      method="GET"
+    >
+      First Name: <input type="text" name="first_name" /> <br />
+      Last Name: <input type="text" name="last_name" />
+      <input type="submit" value="Submit" />
     </form>
   </body>
 </html>
