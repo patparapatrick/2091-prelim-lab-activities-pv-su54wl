@@ -1,23 +1,9 @@
-var express = require('express');
-var app = express();
-//require body-parser for this method
-var bodyParser = require('body-parser');
-// Create application/x-www-form-urlencoded parser
-var urlencodedParser = bodyParser.urlencoded({ extended: false });
+var http = require('http');
 
-app.get('/', function (req, res) {
-  res.sendFile(__dirname + '/' + 'contact.html');
-});
-app.post('/process_post', urlencodedParser, function (req, res) {
-  // Prepare output in JSON format
-  response = {
-    first_name: req.body.first_name,
-    last_name: req.body.last_name
-  };
-  console.log(response);
-  res.end(JSON.stringify(response));
-});
 
-app.listen(3000, function () {
-  console.log('Server is running on port 3000');
-});
+http.createServer(function(req, res){
+
+  res.writeHead( 200, { "content-Type" : 'text/plain' } )
+  res.end('Hello world');
+
+}).listen(3000, 'localhost');
