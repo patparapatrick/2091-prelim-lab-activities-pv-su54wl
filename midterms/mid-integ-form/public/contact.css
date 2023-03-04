@@ -3,6 +3,10 @@ h1 {
   color: rebeccapurple;
   text-align: center;
 }
+form {
+  text-align: left;
+  letter-spacing: 5px;
+}
 /* Add a black background color to the top navigation */
 .topnav {
   background-color: black;
