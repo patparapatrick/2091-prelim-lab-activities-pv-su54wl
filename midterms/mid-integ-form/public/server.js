@@ -17,9 +17,6 @@ app.get('/process_get', function (req, res) {
   res.end(JSON.stringify(response));
 });
 
-const express = require('express');
-app = express();
-
 app.use(express.static('public'));
 
 const path = require('path');
