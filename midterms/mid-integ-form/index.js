@@ -47,7 +47,7 @@ const fileStorage = multer.diskStorage({
 
 const upload = multer({ storage: fileStorage });
 //file upload route
-app.post('/public' + '/uploads', upload.single('myFile'), (req, res) => {
+app.post('/uploads', upload.single('myFile'), (req, res) => {
   console.log(req.file);
 
   req.file.mimetype = mime.lookup(req.file.originalname);
