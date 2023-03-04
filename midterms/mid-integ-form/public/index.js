@@ -52,9 +52,9 @@ app.post('/public' + '/uploads', upload.single('myFile'), (req, res) => {
 
   req.file.mimetype = mime.lookup(req.file.originalname);
 
-  res.sendFile(path.join(__dirname, 'file-upload.html'));
+  res.sendFile(path.join(__dirname, 'file-uploaded.html'));
 });
 
 app.get('/file-upload', (req, res) => {
-  res.sendFile(__dirname + '/' + 'file-upload.html');
+  res.sendFile(__dirname + '/' + 'file-uploaded.html');
 });
