@@ -4,8 +4,8 @@ const app = express();
 
 app.use(express.static('public'));
 
-app.get((req, res) => {
-  res.sendFile(__dirname + 'contact.html');
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/' + 'contact.html');
 });
 
 const port = process.env.PORT || 3000;
@@ -15,8 +15,8 @@ app.listen(port, () => {
 });
 
 
-app.get(function (req, res) {
-  res.sendFile(__dirname + 'contact.html');
+app.get('/', function (req, res) {
+  res.sendFile(__dirname + '/' + 'contact.html');
 });
 
 app.get('/process_get', function (req, res) {
