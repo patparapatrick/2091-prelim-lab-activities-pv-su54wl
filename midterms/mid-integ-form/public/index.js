@@ -55,6 +55,6 @@ app.post('/public' + '/file-uploaded', upload.single('myFile'), (req, res) => {
   res.sendFile(path.join(__dirname, 'file-uploaded.html'));
 });
 
-app.get('/file-upload', (req, res) => {
+app.get('/file-uploaded', (req, res) => {
   res.sendFile(__dirname + '/' + 'file-uploaded.html');
 });
